@@ -6,7 +6,7 @@ if (!isset($category_id)) {
 $category_id = filter_input(INPUT_GET, 'category_id', 
 FILTER_VALIDATE_INT);
 if ($category_id == NULL || $category_id == FALSE) {
-$category_id = 1;
+$category_id = 2;
 }
 }
 
@@ -38,65 +38,81 @@ $statement3->execute();
 $records = $statement3->fetchAll();
 $statement3->closeCursor();
 ?>
+
 <div class="container">
-<?php
-include('includes/header.php');
-?>
-<h1>Record List</h1>
+    <?php
+    include('includes/header.php');
+    ?>
+    <h1>Record List</h1>
+    <h2>Item</h2>
 
-<aside>
-<!-- display a list of categories -->
-<h2>Categories</h2>
-<nav>
-<ul>
-<?php foreach ($categories as $category) : ?>
-<li><a href=".?category_id=<?php echo $category['categoryID']; ?>">
-<?php echo $category['categoryName']; ?>
-</a>
-</li>
-<?php endforeach; ?>
-</ul>
-</nav>          
-</aside>
+    <aside>
+    <div class = "topnav">
+        <!-- display a list of categories -->
+        <h2>Categories</h2>
+        <nav>
+        <ul>
+        <?php foreach ($categories as $category) : ?>
+        <li><a href=".?category_id=<?php echo $category['categoryID']; ?>">
+        <?php echo $category['categoryName']; ?>
+        </a>
+        </li>
+        <?php endforeach; ?>
+        </ul>
+        </nav>  
+    </div>        
+    </aside>
 
-<section>
-<!-- display a table of records -->
-<h2><?php echo $category_name; ?></h2>
-<table>
-<tr>
-<th>Image</th>
-<th>Name</th>
-<th>Price</th>
-<th>Delete</th>
-<th>Edit</th>
-</tr>
-<?php foreach ($records as $record) : ?>
-<tr>
-<td><img src="image_uploads/<?php echo $record['image']; ?>" width="100px" height="100px" /></td>
-<td><?php echo $record['name']; ?></td>
-<td class="right"><?php echo $record['price']; ?></td>
-<td><form action="delete_record.php" method="post"
-id="delete_record_form">
-<input type="hidden" name="record_id"
-value="<?php echo $record['recordID']; ?>">
-<input type="hidden" name="category_id"
-value="<?php echo $record['categoryID']; ?>">
-<input type="submit" value="Delete">
-</form></td>
-<td><form action="edit_record_form.php" method="post"
-id="delete_record_form">
-<input type="hidden" name="record_id"
-value="<?php echo $record['recordID']; ?>">
-<input type="hidden" name="category_id"
-value="<?php echo $record['categoryID']; ?>">
-<input type="submit" value="Edit">
-</form></td>
-</tr>
-<?php endforeach; ?>
-</table>
-<p><a href="add_record_form.php">Add Record</a></p>
-<p><a href="category_list.php">Manage Categories</a></p>
-</section>
+    <section>
+    <!-- display a table of records -->
+    <div = classname = "category">
+        <h2><?php echo $category_name; ?></h2>
+    <div>
+    <div>
+
+    <div>
+        <?php foreach ($records as $record) : ?>
+        </div>
+
+    <div class = "description">
+        <?php echo $record['description']; ?></br></br>
+    </div>
+
+    <div class = "image">
+        <img src="image_uploads/<?php echo $record['image']; ?>" width="800px" height="450px" />
+    </div></br>
+
+    <div>
+        <form action="delete_record.php" method="post" id="delete_record_form">
+
+            <input type="hidden" name="record_id" value="<?php echo $record['recordID']; ?>">
+
+            <input type="hidden" name="category_id" value="<?php echo $record['categoryID']; ?>">
+
+            <input type="submit" value="Delete"></br></br>
+
+            </form>
+
+            <form action="edit_record_form.php" method="post" id="delete_record_form">
+
+            <input type="hidden" name="record_id" value="<?php echo $record['recordID']; ?>">
+
+            <input type="hidden" name="category_id" value="<?php echo $record['categoryID']; ?>">
+
+            <input type="submit" value="Edit">
+        </form>
+    </div>
+
+
+    </div>
+    <?php endforeach; ?>
+
+    <div>
+        <p><a href="add_record_form.php">Add Record</a></p>
+        <p><a href="category_list.php">Manage Categories</a></p>
+        </section>
+    </div>
+</div>
 <?php
 include('includes/footer.php');
 ?>
