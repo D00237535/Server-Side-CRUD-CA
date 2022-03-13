@@ -43,8 +43,11 @@ $statement3->closeCursor();
     <?php
     include('includes/header.php');
     ?>
-    <h1>Record List</h1>
-    <h2>Item</h2>
+
+    <div class = "tags" >
+        <h1>Record List</h1>
+        <h2>Item</h2>
+    </div>
 
     <aside>
     <div class = "topnav">
@@ -82,7 +85,7 @@ $statement3->closeCursor();
         <img src="image_uploads/<?php echo $record['image']; ?>" width="800px" height="450px" />
     </div></br>
 
-    <div>
+    <div class = "DeleteEdit">
         <form action="delete_record.php" method="post" id="delete_record_form">
 
             <input type="hidden" name="record_id" value="<?php echo $record['recordID']; ?>">

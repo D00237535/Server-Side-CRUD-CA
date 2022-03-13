@@ -30,12 +30,12 @@ include('includes/header.php');
 
             <label>Name:</label>
             <input type="input" name="name"
-                   value="<?php echo $records['name']; ?>">
+                   value="<?php echo $records['name']; ?>" required>
             <br>
 
             <label>Description:</label>
             <input type="input" name="description"
-                   value="<?php echo $records['description']; ?>">
+                   value="<?php echo $records['description']; ?>"required>
             <br>
 
             <label>Image:</label>
