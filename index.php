@@ -44,33 +44,41 @@ $statement3->closeCursor();
     include('includes/header.php');
     ?>
 
-    <div class = "tags" >
-        <h1>Record List</h1>
-        <h2>Item</h2>
+    <div class = "tag1" >
+        Record List
+    </div>
+    <div class = "tag2" >
+        Item
     </div>
 
     <aside>
     <div class = "topnav">
         <!-- display a list of categories -->
-        <h2>Categories</h2>
+        <div class = "tag3">
+            <h2>Categories</h2>
+        </div>
         <nav>
-        <ul>
-        <?php foreach ($categories as $category) : ?>
-        <li><a href=".?category_id=<?php echo $category['categoryID']; ?>">
-        <?php echo $category['categoryName']; ?>
-        </a>
-        </li>
-        <?php endforeach; ?>
-        </ul>
+            <ul>
+                <?php foreach ($categories as $category) : ?>
+                    <li>
+                        <a href=".?category_id=<?php echo $category['categoryID']; ?>">
+                        <?php echo $category['categoryName']; ?>
+                        </a>
+                    </li>
+                <?php endforeach; ?>
+            </ul>
         </nav>  
     </div>        
     </aside>
 
     <section>
     <!-- display a table of records -->
-    <div = classname = "category">
-        <h2><?php echo $category_name; ?></h2>
-    <div>
+    <div class = "category">
+        <div class = "title">
+            <?php echo $category_name; ?>
+        </div>
+    <div></br>
+    
     <div>
 
     <div>
@@ -110,11 +118,11 @@ $statement3->closeCursor();
     </div>
     <?php endforeach; ?>
 
-    <div>
-        <p><a href="add_record_form.php">Add Record</a></p>
-        <p><a href="category_list.php">Manage Categories</a></p>
-        </section>
+    <div class = "bottom">
+        <a href="add_record_form.php">Add Record</a>
+       
     </div>
+ </section>
 </div>
 <?php
 include('includes/footer.php');
