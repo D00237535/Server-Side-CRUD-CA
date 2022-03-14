@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="500" src="image_uploads/league-of-legends-champions-i102252(1).png" alt="Off License logo">
+  <img width="500" src="image_uploads/Screenshot_2022-03-13_165002.png" alt="Off License logo">
 </p>
 <h1> A website showing off some of the most </h1>
 <h1> popular League of Legends game modes </h1>
