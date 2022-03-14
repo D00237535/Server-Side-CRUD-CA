@@ -8,9 +8,9 @@
 
 ### Instructions for use
 * Install XAMPP
-* Open XAMPP control panel and start MySQL and Apache
-* Create a MySQL database called offlicense in PHP MyAdmin
-* Run the code in the data-for-your-database.txt file in PHP MyAdmin
+* Open XAMPP and start up MySQL and Apache
+* Create a MySQL database called ssd_ca2_db in PHP MyAdmin
+* Copy the code in the data-for-your-database.txt file and paste it in PHP MyAdmin
 * Move the PHP files in to your htdocs folder inside the XAMPP folder so Apache can process the PHP code
 * Configure the database.php file to connect to your SQL database
 
@@ -20,5 +20,5 @@
 
 <h2 align="center">Enjoy</h2>
 <p align="center">
-  <img width="500" src="image_upload/league-of-legends.gif" alt="League of Legends gif">
+  <img width="500" src="image_uploads/league-of-legends.gif" alt="League gif">
 </p>
