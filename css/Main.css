@@ -32,7 +32,7 @@ header h1 {
   font-size: 30px;
   margin: 0;
   padding: .5em 0;
-  color: blue;
+  color: gold;
 }
 
 aside {
@@ -83,8 +83,9 @@ li {
 }
 
 a {
-  color: #29407c;
+  color: gold;
   font-weight: bold;
+  margin-right: 10%;
 }
 
 a:hover {

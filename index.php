@@ -55,7 +55,7 @@ $statement3->closeCursor();
     <div class = "topnav">
         <!-- display a list of categories -->
         <div class = "tag3">
-            <h2>Categories</h2>
+            Categories
         </div>
         <nav>
             <ul>
@@ -66,7 +66,7 @@ $statement3->closeCursor();
                         </a>
                     </li>
                 <?php endforeach; ?>
-            </ul>
+            </ul> 
         </nav>  
     </div>        
     </aside>
