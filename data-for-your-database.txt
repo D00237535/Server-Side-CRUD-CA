@@ -1,27 +1,3 @@
--- phpMyAdmin SQL Dump
--- version 5.1.1
--- https://www.phpmyadmin.net/
---
--- Host: localhost:8889
--- Generation Time: Feb 20, 2022 at 06:31 PM
--- Server version: 5.7.34
--- PHP Version: 7.4.21
-
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-START TRANSACTION;
-SET time_zone = "+00:00";
-
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
-
---
--- Database: `ca2`
---
-
--- --------------------------------------------------------
 
 --
 -- Table structure for table `categories`
@@ -37,11 +13,12 @@ CREATE TABLE `categories` (
 --
 
 INSERT INTO `categories` (`categoryID`, `categoryName`) VALUES
-(1, 'Category 1'),
-(2, 'Category 2'),
-(3, 'Category 3');
-
--- --------------------------------------------------------
+(1, "Summoner's Rift"),
+(2, "ARAM"),
+(3, "Hexakill"),
+(4, "One for All"),
+(5, "Ultra Rapid Fire")
+(6, "Ultimate Spellbook");
 
 --
 -- Table structure for table `records`
@@ -51,37 +28,81 @@ CREATE TABLE `records` (
   `recordID` int(11) NOT NULL,
   `categoryID` int(11) NOT NULL,
   `name` varchar(255) NOT NULL,
-  `price` decimal(10,2) NOT NULL,
+  `description` varchar(255) NOT NULL,
+
+
   `image` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `records`
 --
+INSERT INTO `records` (`recordID`, `categoryID`, `name`, `description`) VALUES
+(1, 1, 
+"Summoner`s Rift", "Summoner`s Rift is the main game mode in League of Legends, the mode involves two teams of five people splitting off across four different regions of the map
+One in the top lane, One in the mid lane, 2 in the bottom lane and the final player in the jungle.",
 
-INSERT INTO `records` (`recordID`, `categoryID`, `name`, `price`, `image`) VALUES
-(1, 1, 'Some text', '12.00', '644471.jpg'),
-(2, 1, 'Some text', '15.00', '233012.jpg'),
-(3, 1, 'Some text', '18.00', '329484.jpg'),
-(4, 1, 'Some text', '10.00', '644055.jpg'),
-(5, 2, 'Some text', '16.00', '373465.jpg'),
-(6, 2, 'Some text', '19.00', '373989.jpg'),
-(7, 2, 'Some text', '12.00', '374104.jpg'),
-(8, 2, 'Some text', '10.00', '4733.jpg'),
-(9, 2, 'Some text', '15.00', '834551.jpg'),
-(10, 3, 'Some text', '13.00', '908783.jpg'),
-(11, 3, 'Some text', '17.00', '835545.jpg'),
-(12, 3, 'Some text', '19.00', '119273.jpg');
+"The main objective of the game is to push into your enemies base and destroy the enemies nexus. To do this you have to destroy the two turrets on the enemy half of the lane and enter the enemy base.
+Once inside the enemy base you need to destroy the turret inside the base that protects a structure called an inhibitor which will allow you damage the final two turrets called the Nexus turrets which
+protect the Nexus which when destroyed ends the game giving the win to the team which destroyed the nexus.",
+
+"While this is the main objective of the game role has other objectives.",
+
+"Bottom Lane.",
+
+"The bottom lane has the ADC or the attack damage carry and the support, it is the ADC's job to become strong enough to carry the game with damage and be the main way the enemy team die in late game,
+due the importance of this the bottom lane is the only duo lane as it is the supports job to help the ADC reach the point they are able to carry the game.",
+
+"Mid Lane.",
+
+"The mid lane might be one of the hardest lanes to play as it is the shortest lane it tends to be where both teams will rush down in the mid and late game meaning losing mid lane can make coming back 
+from losing mid lane can be quite hard meaning that the mid laner needs to focus on pushing the lane but also not playing to risky that they get killed and allow the enemy to push and win the lane.
+Another issue that mid lane can have is that it is the only lane that is linked to both of the jungles meaning that the enemy jungler can come in and make it a two vs. one and tends to mean that
+they will get pushed back and may lose lane.",
+
+"Top Lane.",
+
+"With the bottom lane being the damage dealer it fills fitting that the opposite lane in the game the top lane tends to be where the main tanks play with there job being to become strong enough to shield
+their team and allow the other more damaging players to kill the enemy team.",
+
+"Jungle.",
+
+"The Jungler is a player with a very different play style to the rest of the player as unlike the other roles the jungler does not have turrets to destroy as they run around the area in-between all the lanes,
+and kill monsters that spawn in there, junglers also will go into lane to attack enemies from the back and cut off escape allowing the lane to get an easier kill or get the kill themself and then help
+push the lane and destroy turrets, the jungler also has to do some other objectives such as slaying the drakes and Baron Nashor to give buffs to your team either for the whole game or for a set length of time"
+),
+	
+(2, 2, 'ARAM', 
+"ARAM standing for All Random All Mid at the start was player made game mode and involved players loading into a custom game with friends and picking a random champion and fighting each other in the middle lane of the map
+with both sides agreeing to not use the top or bottom lane or to enter the jungle this game mode was deemed to be more casual and due to its popularity Riot decided to make it an official game mode in the game which was 
+played on the howling abyss map"
+
+"The objective of the game is the same as the normal game mode but the only difference is that there is no inhibitor turret meaning it is easier to win but due to all the team fights the tide of the game can turn very quickly
+so you can go from winning the game to losing very quickly"
+),
+
+(3, 3, 'Hexakill', 
+"Hexakill works the same as normal Summoner's Rift with the main difference being that there is a sixth player in the game which would go top with the normal toplaner making it the second duo lane and now allows for a new max
+kill message going from a Pentakill to a Hexakill which is where  the game mode gets its name"),
+
+(4, 4, 'One For All', 
+"One For All works the same as normal Summoner's Rift with the main difference being that you doing get to pick your own instead you and your teammates vote on a champion and the one with the most votes it the champion the whole
+team has to play with ties broken by a coin flip or dice role depending on how many champions have the same amount of votes"),
+
+(5, 5, 'Ultra Rapid Fire', 
+"Ultra Rapid Fire works the same as normal Summoner's Rift with the main difference being that there is a buff that give enough ability haste to use your abilities as often as you want as well as the fact that you do not have to pay
+the mana or energy cost to use abilities in the mode there is also a cannon at your team spawn point that lets you quickly send your send yourself to almost any point on the map you want.
+
+Ultra Rapid Fire also has an unwritten rule where at the start of the game everyone goes to the top lane and fight it out until the minions spawn at one minute and five second mark at which point you go to your lane"),
+
+(6, 6, 'Ultimate Spellbook', 
+"Ultimate Spellbook works the same as normal Summoner's Rift with the main difference being that one of your summoner spells is replaced with the Ultimate of another champion from a set of three every game you play which are given from a wider array of Ultimates. 
+Another change in this mode that that Junglers have an extra ability called auto smite as junglers need smite but due to having only one summoner spell slot in spellbook it would be unfair for junglers to have no choice in 
+what spell they take");
 
 --
 -- Indexes for dumped tables
 --
-
---
--- Indexes for table `categories`
---
-ALTER TABLE `categories`
-  ADD PRIMARY KEY (`categoryID`);
 
 --
 -- Indexes for table `records`
@@ -94,19 +115,7 @@ ALTER TABLE `records`
 --
 
 --
--- AUTO_INCREMENT for table `categories`
---
-ALTER TABLE `categories`
-  MODIFY `categoryID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
---
 -- AUTO_INCREMENT for table `records`
 --
 ALTER TABLE `records`
   MODIFY `recordID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
-COMMIT;
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
-
