@@ -6,8 +6,3 @@
 
 <!-- the body section -->
 <body>
-<header>
-    <h1>
-        League of Legends Game Modes
-    <h1>
-</header>
