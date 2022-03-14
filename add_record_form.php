@@ -27,11 +27,11 @@ include('includes/header.php');
             </select>
             <br>
             <label>Name:</label>
-            <input type="input" name="name">
+            <input type="input" name="name" required>
             <br>
 
             <label>description:</label>
-            <input type="input" name="description">
+            <input type="input" name="description" required>
             <br>        
             
             <label>Image:</label>

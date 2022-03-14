@@ -20,5 +20,5 @@
 
 <h2 align="center">Enjoy</h2>
 <p align="center">
-  <img width="500" src="https://tenor.com/view/league-of-legends-gif-8430935" alt="Off License Cheers">
+  <img width="500" src="image_upload/league-of-legends.gif" alt="League of Legends gif">
 </p>
