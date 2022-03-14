@@ -4,7 +4,7 @@
 <h1> A website showing off some of the most </h1>
 <h1> popular League of Legends game modes </h1>
 
-[You can see the application running here](https://mysql06.comp.dkit.ie/D00235179/CRUD "OH CRUD")
+[You can see the application running here](https://mysql05.comp.dkit.ie/D00237535/Server-Side-CRUD-CA "OH CRUD")
 
 ### Instructions for use
 * Install XAMPP from the link below.
@@ -16,7 +16,7 @@
 
 ## Requirements for project to run:
 * This is the link to download XAMPP
-[Install XAMPP](https://www.apachefriends.org/index.html "XAMPP")
+[Install XAMPP](https://mysql05.comp.dkit.ie/D00237535/CA2_CRUD_Project/index.php "XAMPP")
 
 <h2 align="center">Have Fun playing</h2>
 <p align="center">
